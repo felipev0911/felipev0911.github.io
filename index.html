@@ -61,7 +61,7 @@
   <div class="distance-counter" id="distance">Distância: 496 km</div>
 
   <video controls poster="A_digital_image_with_text_overlay_features_a_blue_.png">
-    <source src="Oi Maira.MP4" type="video/mp4">
+    <source src="https://drive.google.com/uc?export=download&id=1McwBEEtwJCoZG_rQD23eTuZ24kbIVddD" type="video/mp4">
     Seu navegador não suporta vídeo HTML5.
   </video>
 
@@ -71,27 +71,24 @@
     const canvas = document.getElementById('mapCanvas');
     const ctx = canvas.getContext('2d');
 
-    const pinYou = { x: 60, y: 200 };      // São Paulo
-    const pinMaira = { x: 260, y: 60 };    // Joinville
-    const destination = { x: 160, y: 130 }; // Curitiba
+    const pinYou = { x: 60, y: 200 };
+    const pinMaira = { x: 260, y: 60 };
+    const destination = { x: 160, y: 130 };
     const steps = 100;
     let frame = 0;
 
     function drawMap() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw background
       ctx.fillStyle = '#002244';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Labels
       ctx.fillStyle = "#fff";
       ctx.font = "14px Georgia";
       ctx.fillText("Você", pinYou.x - 20, pinYou.y + 25);
       ctx.fillText("Maira", pinMaira.x - 20, pinMaira.y - 10);
       ctx.fillText("Curitiba 💛", destination.x - 35, destination.y + 20);
 
-      // Trailing path
       ctx.strokeStyle = "#00c8ff";
       ctx.lineWidth = 1;
       ctx.beginPath();
@@ -101,14 +98,12 @@
       ctx.lineTo(destination.x, destination.y);
       ctx.stroke();
 
-      // Animated pins
       const t = Math.min(1, frame / steps);
       const youX = pinYou.x + (destination.x - pinYou.x) * t;
       const youY = pinYou.y + (destination.y - pinYou.y) * t;
       const mairaX = pinMaira.x + (destination.x - pinMaira.x) * t;
       const mairaY = pinMaira.y + (destination.y - pinMaira.y) * t;
 
-      // Draw pins
       ctx.fillStyle = "#ff69b4";
       ctx.beginPath();
       ctx.arc(youX, youY, 6, 0, 2 * Math.PI);
@@ -119,7 +114,6 @@
       ctx.arc(mairaX, mairaY, 6, 0, 2 * Math.PI);
       ctx.fill();
 
-      // Draw heart when meeting
       if (frame >= steps) {
         ctx.fillStyle = "red";
         ctx.font = "24px serif";
@@ -134,7 +128,6 @@
 
     drawMap();
 
-    // Contador de distância
     const counter = document.getElementById('distance');
     let distance = 496;
     let interval = setInterval(() => {
