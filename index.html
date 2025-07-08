@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pra Você, Maira ❤️</title>
+  <title>Pra Você, Maira 💛</title>
   <style>
     body {
       margin: 0;
@@ -54,7 +54,7 @@
 </head>
 <body>
 
-  <h1>Pra Você, Maira ❤️</h1>
+  <h1>Pra Você, Maira 💛</h1>
 
   <canvas id="mapCanvas" width="320" height="240"></canvas>
 
@@ -62,16 +62,17 @@
 
   <video controls poster="A_digital_image_with_text_overlay_features_a_blue_.png">
     <source src="https://drive.google.com/uc?export=download&id=1McwBEEtwJCoZG_rQD23eTuZ24kbIVddD" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
   </video>
 
-  <div class="footer">Com amor, esperando pela nossa historia. 💌</div>
+  <div class="footer">Com amor, esperando por você. 💌</div>
 
   <script>
     const canvas = document.getElementById('mapCanvas');
     const ctx = canvas.getContext('2d');
 
-    const pinMaira = { x: 60, y: 200 };
-    const pinFelipe = { x: 260, y: 60 };
+    const pinYou = { x: 60, y: 200 };
+    const pinMaira = { x: 260, y: 60 };
     const destination = { x: 160, y: 130 };
     const steps = 100;
     let frame = 0;
@@ -84,24 +85,24 @@
 
       ctx.fillStyle = "#fff";
       ctx.font = "14px Georgia";
-      ctx.fillText("Maira - Joinville", pinMaira.x - 20, pinMaira.y + 25);
-      ctx.fillText("Felipe - SP", pinFelipe.x - 20, pinFelipe.y - 10);
-      ctx.fillText("Curitiba 📍", destination.x - 35, destination.y + 20);
+      ctx.fillText("Você", pinYou.x - 20, pinYou.y + 25);
+      ctx.fillText("Maira", pinMaira.x - 20, pinMaira.y - 10);
+      ctx.fillText("Curitiba 💛", destination.x - 35, destination.y + 20);
 
       ctx.strokeStyle = "#00c8ff";
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.moveTo(pinMaira.x, pinMaira.y);
+      ctx.moveTo(pinYou.x, pinYou.y);
       ctx.lineTo(destination.x, destination.y);
-      ctx.moveTo(pinFelipe.x, pinFelipe.y);
+      ctx.moveTo(pinMaira.x, pinMaira.y);
       ctx.lineTo(destination.x, destination.y);
       ctx.stroke();
 
       const t = Math.min(1, frame / steps);
-      const youX = pinMaira.x + (destination.x - pinMaira.x) * t;
-      const youY = pinMaira.y + (destination.y - pinMaira.y) * t;
-      const mairaX = pinFelipe.x + (destination.x - pinFelipe.x) * t;
-      const mairaY = pinFelipe.y + (destination.y - pinFelipe.y) * t;
+      const youX = pinYou.x + (destination.x - pinYou.x) * t;
+      const youY = pinYou.y + (destination.y - pinYou.y) * t;
+      const mairaX = pinMaira.x + (destination.x - pinMaira.x) * t;
+      const mairaY = pinMaira.y + (destination.y - pinMaira.y) * t;
 
       ctx.fillStyle = "#ff69b4";
       ctx.beginPath();
