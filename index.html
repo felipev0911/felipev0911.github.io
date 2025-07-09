@@ -3,7 +3,7 @@
 <head> 
   <meta charset="UTF-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <title>Pra Você, Maira meu amor ❤</title> 
+  <title>Para Você, Maira meu amor ❤</title> 
   <style> 
     body { 
       margin: 0; 
@@ -60,7 +60,7 @@
 </head> 
 <body> 
 
-  <h1>Pra Você, Maira meu amor ❤</h1> 
+  <h1>Para Você, Maira meu amor ❤</h1> 
 
   <div class="since-counter" id="sinceCounter">Carregando o nosso tempo juntos...</div>
 
@@ -87,9 +87,8 @@
       const seconds = Math.floor(diff / 1000) % 60;
       const minutes = Math.floor(diff / 1000 / 60) % 60;
       const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
-      const days = Math.floor(diff / 1000 / 60 / 60 / 24);
 
-      sinceElement.innerHTML = `Conheço você há:<br><strong>${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos</strong>`;
+      sinceElement.innerHTML = `Nos conhecemos há:<br><strong> ${hours} horas, ${minutes} minutos e ${seconds} segundos</strong>`;
     }
 
     setInterval(updateSinceCounter, 1000);
