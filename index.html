@@ -87,8 +87,9 @@
       const seconds = Math.floor(diff / 1000) % 60;
       const minutes = Math.floor(diff / 1000 / 60) % 60;
       const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+      const days = Math.floor(diff / 1000 / 60 / 60 / 24);
 
-      sinceElement.innerHTML = `Nos conhecemos há:<br><strong> ${hours} horas, ${minutes} minutos e ${seconds} segundos</strong>`;
+      sinceElement.innerHTML = `Nos conhecemos há:<br><strong> ${days} Dias, ${hours} Horas, ${minutes} Minutos e ${seconds} Segundos</strong>`;
     }
 
     setInterval(updateSinceCounter, 1000);
@@ -112,8 +113,8 @@
 
       ctx.fillStyle = "#fff"; 
       ctx.font = "14px Georgia"; 
-      ctx.fillText("Maira 󰫸", pinYou.x - 20, pinYou.y + 25); 
-      ctx.fillText("Felipe 󰘃", pinMaira.x - 20, pinMaira.y - 10); 
+      ctx.fillText("Maira 👩🏻‍🦱", pinYou.x - 20, pinYou.y + 25); 
+      ctx.fillText("Felipe 👨🏾", pinMaira.x - 20, pinMaira.y - 10); 
       ctx.fillText("Curitiba 📍", destination.x - 35, destination.y + 20); 
 
       ctx.strokeStyle = "#00c8ff"; 
